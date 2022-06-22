@@ -39,6 +39,25 @@ lua <<EOF
 EOF
 " //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+" Beta//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+" Commenting blocks of code ; para comentar e . para remover no modo visual
+augroup commenting_blocks_of_code
+  autocmd!
+  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+  autocmd FileType conf,fstab       let b:comment_leader = '# '
+  autocmd FileType tex              let b:comment_leader = '% '
+  autocmd FileType mail             let b:comment_leader = '> '
+  autocmd FileType vim              let b:comment_leader = '" '
+augroup END
+noremap <silent> ; :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> . :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+"Tab im blobk beta add in fial
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 " VSCode features///////////////////////////////////////////////////////////////////////////////////////////////////////////
 map <C-a> ggVG
 map <C-x> c
