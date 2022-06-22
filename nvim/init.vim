@@ -59,26 +59,66 @@ vmap <S-Tab> <gv
 " //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " VSCode features///////////////////////////////////////////////////////////////////////////////////////////////////////////
+" Select all
 map <C-a> ggVG
+
+" Cut
 map <C-x> c
+
+" Redo
+"map <C-r> :redo<CR>
+
+" Desfaz linha por linha qundo usa U
+"inoremap <silent> <cr> <c-z>u<cr>
+
+" Undo
 map <C-z> u
+inoremap <C-z> <ESC>u<ESC>==gi
+vnoremap <C-z> <ESC>u<ESC>gv=gv
+
+" Copy
 map <C-c> y
+
+" Move up/down
 nnoremap <A-down> :m .+1<CR>==
 nnoremap <A-up> :m .-2<CR>==
+
 inoremap <A-down> <Esc>:m .+1<CR>==gi
 inoremap <A-up> <Esc>:m .-2<CR>==gi
+
 vnoremap <A-down> :m '>+1<CR>gv=gv
 vnoremap <A-up> :m '<-2<CR>gv=gv
+
+" Copy up/down
+nnoremap <S-up> yyp :m .-2<CR>==
 nnoremap <S-down> yyp
-nnoremap <S-up> yyp
+
+inoremap <S-Up> <ESC> yyp :m .-1<CR> ==gi
+inoremap <S-Down> <ESC> yyp
+
+vnoremap <S-down> <ESC> yyp gv=gv
+vnoremap <S-up> <ESC> yyp gv=gv
+
+" Git
 nnoremap <C-g> :FloatermNew lazygit<CR>
 
 " Mapping
-"map! <C-A-n> <ESC> :w <CR> :FloatermNew gcc % -o %< && ./%< <CR>
 map <C-A-n> :w <CR> :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
-map <C-q> :quit!<CR>
-map <C-s> :w <CR> :w <CR>
 map <C-m> :FloatermNew <CR>
+
+" Save
+inoremap <C-s> <C-O>:w<CR>
+map <C-s> :w <CR> :w <CR>
+vnoremap <C-s> <ESC> :w<CR>:w<CR>gv=gv
+
+" Quit
+map <C-q> :quit!<CR>
+inoremap <C-q> <ESC>:quit!<CR>
+vnoremap <C-q> <ESC> :quit!<CR>
+
+" inoremap <C-q> <ESC>:quit!<CR>
+"inoremap <C-s> <ESC>:w<CR>:w<CR>==gi
+"map! <C-A-n> <ESC> :w <CR> :FloatermNew gcc % -o %< && ./%< <CR>
 "map! <C-S-q> <ESC> :quit!<CR>
 "map <C-h> <C-w>h
 "map <S-q> :BufferLineCloseLeft<CR>
@@ -219,24 +259,16 @@ let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not inst
 " //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Vim-startify//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-let g:startify_custom_header = [
-    \'',
-    \'   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣭⣿⣶⣿⣦⣼⣆         ',
-    \'    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ',
-    \'          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷⠄⠄⠄⠄⠻⠿⢿⣿⣧⣄     ',
-    \'           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ',
-    \'          ⢠⣿⣿⣿⠈  ⠡⠌⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ',
-    \'   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘⠄ ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ',
-    \'  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ',
-    \' ⣠⣿⠿⠛⠄⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ',
-    \' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇⠄⠛⠻⢷⣄ ',
-    \'      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
-    \'       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
-    \'     ⢰⣶  ⣶ ⢶⣆⢀⣶⠂⣶⡶⠶⣦⡄⢰⣶⠶⢶⣦  ⣴⣶     ',
-    \'     ⢸⣿⠶⠶⣿ ⠈⢻⣿⠁ ⣿⡇ ⢸⣿⢸⣿⢶⣾⠏ ⣸⣟⣹⣧    ',
-    \'     ⠸⠿  ⠿  ⠸⠿  ⠿⠷⠶⠿⠃⠸⠿⠄⠙⠷⠤⠿⠉⠉⠿⠆   ',
-    \'                                   ',
-    \]
+let g:startify_custom_header = [ 
+\ '  __     ___             ',
+\ '  \ \   / (_)_ __ ___   ',
+\ '   \ \ / /| | ''_ ` _ \ ',
+\ '    \ V / | | | | | | |  ',
+\ '     \_/  |_|_| |_| |_|     ﭧ Diogo-ss',
+\ '',
+\ '',
+\ ]
+    
 
 let g:startify_lists = [
             \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
