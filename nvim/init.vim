@@ -1,6 +1,7 @@
 " Pluguins//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 call plug#begin()
 
+Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
 Plug 'neovim/nvim-lspconfig' "LPS https://www.jakewiesler.com/blog/getting-started-with-vim
 Plug 'nvim-lua/plenary.nvim' "Dependênci do Telescope
@@ -20,7 +21,7 @@ Plug 'ryanoasis/vim-devicons' "Icons for plugins (NERDTree)
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "Color for icons
 Plug 'voldikss/vim-floaterm' "Terminal fluent
 Plug 'sheerun/vim-polyglot' "Better sintax
-Plug 'kdheepak/lazygit.nvim' " Interface Git (lazygit)
+Plug 'kdheepak/lazygit.nvim' " Interface Git (lazygit) FloatermNew subistitui
 
 call plug#end()
 " //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -51,13 +52,15 @@ vnoremap <A-down> :m '>+1<CR>gv=gv
 vnoremap <A-up> :m '<-2<CR>gv=gv
 nnoremap <S-down> yyp
 nnoremap <S-up> yyp
-nnoremap <C-g> :LazyGit<CR>
+nnoremap <C-g> :FloatermNew lazygit<CR>
 
 " Mapping
-map <C-A-n> :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
+"map! <C-A-n> <ESC> :w <CR> :FloatermNew gcc % -o %< && ./%< <CR>
+map <C-A-n> :w <CR> :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
 map <C-q> :quit!<CR>
-map <C-s> :w<CR>
+map <C-s> :w <CR> :w <CR>
 map <C-m> :FloatermNew <CR>
+"map! <C-S-q> <ESC> :quit!<CR>
 "map <C-h> <C-w>h
 "map <S-q> :BufferLineCloseLeft<CR>
 "map <F5> :w <CR> :!gcc % -o %< && ./%< <CR>
@@ -160,11 +163,11 @@ map <C-f> :Telescope find_files<CR>
 " //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Rainbow
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
-"au Syntax * RainbowParenthesesLoadSquare
+au VimEnter * RainbowParenthesesToggle " on/off
+au Syntax * RainbowParenthesesLoadRound " ( )
+au Syntax * RainbowParenthesesLoadBraces " { }
+" au Syntax * RainbowParenthesesLoadChevrons " < >
+"au Syntax * RainbowParenthesesLoadSquare " []
 " //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " DevIcons Config///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -194,4 +197,30 @@ let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
 let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
 let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed
+" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+" Vim-startify//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let g:startify_custom_header = [
+    \'',
+    \'   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣭⣿⣶⣿⣦⣼⣆         ',
+    \'    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ',
+    \'          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷⠄⠄⠄⠄⠻⠿⢿⣿⣧⣄     ',
+    \'           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ',
+    \'          ⢠⣿⣿⣿⠈  ⠡⠌⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ',
+    \'   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘⠄ ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ',
+    \'  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ',
+    \' ⣠⣿⠿⠛⠄⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ',
+    \' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇⠄⠛⠻⢷⣄ ',
+    \'      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
+    \'       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
+    \'     ⢰⣶  ⣶ ⢶⣆⢀⣶⠂⣶⡶⠶⣦⡄⢰⣶⠶⢶⣦  ⣴⣶     ',
+    \'     ⢸⣿⠶⠶⣿ ⠈⢻⣿⠁ ⣿⡇ ⢸⣿⢸⣿⢶⣾⠏ ⣸⣟⣹⣧    ',
+    \'     ⠸⠿  ⠿  ⠸⠿  ⠿⠷⠶⠿⠃⠸⠿⠄⠙⠷⠤⠿⠉⠉⠿⠆   ',
+    \'                                   ',
+    \]
+
+let g:startify_lists = [
+            \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
+            \ { 'header': ['   MRU'],            'type': 'files' },]
+      ""\ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
 " //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
