@@ -1,0 +1,30 @@
+{
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
+    "suggest.completionItemKindLabels": {
+        "function"              : "",
+        "method"                : "",
+        "variable"              : "",
+        "constant"              : "",
+        "struct"                : "",
+        "class"                 : "פּ",
+        "interface"             : "",
+        "text"                  : "",
+        "enum"                  : "",
+        "enumMember"            : "",
+        "module"                : "",
+        "color"                 : "",
+        "property"              : "ﰠ",
+        "field"                 : "",
+        "unit"                  : "塞",
+        "file"                  : "",
+        "value"                 : "",
+        "event"                 : "",
+        "folder"                : "",
+        "keyword"               : "", //  
+        "snippet"               : "",
+        "operator"              : "",
+        "reference"             : "",
+        "constructor"           : "",
+        "typeParameter"         : ""
+    }   
+}
