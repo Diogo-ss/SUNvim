@@ -83,8 +83,8 @@ map <C-c> y
 nnoremap <A-down> :m .+1<CR>==
 nnoremap <A-up> :m .-2<CR>==
 
-inoremap <A-down> <Esc>:m .+1<CR>==gi
-inoremap <A-up> <Esc>:m .-2<CR>==gi
+inoremap <A-down> <ESC>:m .+1<CR>==gi
+inoremap <A-up> <ESC>:m .-2<CR>==gi
 
 vnoremap <A-down> :m '>+1<CR>gv=gv
 vnoremap <A-up> :m '<-2<CR>gv=gv
@@ -96,8 +96,8 @@ nnoremap <S-down> yyp
 inoremap <S-Up> <ESC> yyp :m .-1<CR> ==gi
 inoremap <S-Down> <ESC> yyp
 
-vnoremap <S-down> <ESC> yyp gv=gv
-vnoremap <S-up> <ESC> yyp gv=gv
+vnoremap <S-down> <ESC> yyp :m .+0<CR>v
+vnoremap <S-up> <ESC>yyp :m .-1<CR>gv=gv
 
 " Git
 nnoremap <C-g> :FloatermNew lazygit<CR>
