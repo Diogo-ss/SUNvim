@@ -24,7 +24,6 @@ Plug 'sheerun/vim-polyglot' "Better sintax
 Plug 'kdheepak/lazygit.nvim' " Interface Git (lazygit) FloatermNew subistitui
 
 call plug#end()
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Plug Bug/Disable
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiplos cursores (bugado)
@@ -37,7 +36,6 @@ call plug#end()
 lua <<EOF
  print("Partiu 42! Vamo que vamo!")
 EOF
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Beta//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 " Commenting blocks of code ; para comentar e . para remover no modo visual
@@ -53,10 +51,9 @@ augroup END
 noremap <silent> ; :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> . :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
-"Tab im blobk beta add in fial
+"Add/remove Tab em blocks de cídigo
 vmap <Tab> >gv
-vmap <S-Tab> <gv
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+vmap <S-Tab> <gv 
 
 " VSCode features///////////////////////////////////////////////////////////////////////////////////////////////////////////
 " Select all
@@ -89,6 +86,8 @@ inoremap <A-up> <ESC>:m .-2<CR>==gi
 vnoremap <A-down> :m '>+1<CR>gv=gv
 vnoremap <A-up> :m '<-2<CR>gv=gv
 
+vnoremap <S-y> ypv
+
 " Copy up/down
 nnoremap <S-up> yyp :m .-2<CR>==
 nnoremap <S-down> yyp
@@ -116,15 +115,6 @@ map <C-q> :quit!<CR>
 inoremap <C-q> <ESC>:quit!<CR>
 vnoremap <C-q> <ESC> :quit!<CR>
 
-" inoremap <C-q> <ESC>:quit!<CR>
-"inoremap <C-s> <ESC>:w<CR>:w<CR>==gi
-"map! <C-A-n> <ESC> :w <CR> :FloatermNew gcc % -o %< && ./%< <CR>
-"map! <C-S-q> <ESC> :quit!<CR>
-"map <C-h> <C-w>h
-"map <S-q> :BufferLineCloseLeft<CR>
-"map <F5> :w <CR> :!gcc % -o %< && ./%< <CR>
-"map <S-e> :BufferLineCloseRight<CR>
-
 " Split Config
 set splitbelow splitright " For Work Split Config
 " ** Split
@@ -140,7 +130,6 @@ nnoremap <C-Left> <C-w>h
 nnoremap <C-Down> <C-w>j
 nnoremap <C-Up> <C-w>k
 nnoremap <C-Right> <C-w>l
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Settins Basic/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 set number
@@ -164,12 +153,10 @@ set hidden
 set undofile
 set ignorecase
 set smartcase
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Theme/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 syntax on
 colorscheme onedark
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Tab Buffer Config/////////////////////////////////////////////////////////////////////////////////////////////////////////
 set termguicolors
@@ -182,11 +169,9 @@ nnoremap <silent><C-PageDown> :BufferLineCyclePrev<CR>
 nnoremap <silent><C-A-PageUp> :BufferLineMoveNext<CR>
 nnoremap <silent><C-A-PageDown> :BufferLineMovePrev<CR>
 nnoremap <silent><C-w> :BufferLinePickClose<CR>
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Airline Config////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let g:airline_powerline_fonts = 1 "Ativa ícones na AirLine
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " NERDTree Mapping//////////////////////////////////////////////////////////////////////////////////////////////////////////
 " Oculta o nome do diretório
@@ -214,12 +199,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Unknown'   :'?',
                 \ }
 
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Telescope Config//////////////////////////////////////////////////////////////////////////////////////////////////////////
 map <C-f> :Telescope find_files<CR> 
-"Lista os arquivos em seu diretório de trabalho atual, respeita .gitignore
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Rainbow
 au VimEnter * RainbowParenthesesToggle " on/off
@@ -227,7 +209,6 @@ au Syntax * RainbowParenthesesLoadRound " ( )
 au Syntax * RainbowParenthesesLoadBraces " { }
 " au Syntax * RainbowParenthesesLoadChevrons " < >
 "au Syntax * RainbowParenthesesLoadSquare " []
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " DevIcons Config///////////////////////////////////////////////////////////////////////////////////////////////////////////
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -235,14 +216,12 @@ let g:DevIconsEnableFoldersOpenClose = 1
 let g:DevIconsEnableFolderExtensionPatternMatching = 1
 let g:DevIconsDefaultFolderOpenSymbol=''
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol=''
-" Custom icons for file extensions
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ts'] = 'ﯤ'
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['json'] = 'ﬥ'
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.test.ts'] = 'ﭧ'
-" Custom icons for specific filenames
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['ormconfig.js'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.env'] = 'ﭩ'
@@ -256,7 +235,6 @@ let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
 let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
 let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 " Vim-startify//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let g:startify_custom_header = [ 
@@ -269,9 +247,6 @@ let g:startify_custom_header = [
 \ '',
 \ ]
     
-
 let g:startify_lists = [
             \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
             \ { 'header': ['   MRU'],            'type': 'files' },]
-      ""\ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
-" //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
