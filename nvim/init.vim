@@ -6,7 +6,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
 Plug 'neovim/nvim-lspconfig' "LPS https://www.jakewiesler.com/blog/getting-started-with-vim
 Plug 'nvim-lua/plenary.nvim' "Dependênci do Telescope
 Plug 'nvim-telescope/telescope.nvim' "Localiza arquivos
-Plug 'wakatime/vim-wakatime' "WakaTime
+" Plug 'wakatime/vim-wakatime' "WakaTime
 Plug 'vim-airline/vim-airline' "barra inferior
 Plug 'vim-airline/vim-airline-themes' "temas da barra inferior
 Plug 'navarasu/onedark.nvim' "one dark mode
