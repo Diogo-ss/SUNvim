@@ -26,7 +26,7 @@
 <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0⠀-⠀para projetos em C/C++<p>
 <a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a>⠀-⠀para facilitar o uso do Git<p>
 
-## Instalação
+## Instalação (WSL/Linux)
 
 ```shell
 git clone https://github.com/Diogo-ss/SSNvim.git ~/.config/sunvim --depth 1 ; rm -rf ~/.config/nvim ; mv ~/.config/sunvim/nvim ~/.config ; rm -rf ~/.config/sunvim ; nvim -c 'PlugInstall'
