@@ -18,14 +18,13 @@
 ## Screenshot
 
 ## Dependências
-neovim >= 7.0 <p>
-nodejs >= 12.xx <p>
-Vim-plug <p>
+<a href="https://neovim.io/" target="_blank"> Neovim </a> >= 0.7.0<p>
+<a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 12.xx<p>
+<a href="https://github.com/junegunn/vim-plug" target="_blank"> Neovim </a> Vim-Plug<p>
 
-Dependências opcionais:
-Clangd para C <p>
-LzyGit <p>
-
+### Dependências opcionais:
+<a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0<p>
+<a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit </a><p>
 
 ## Instalação
 
