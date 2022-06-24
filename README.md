@@ -9,8 +9,8 @@
   - [Geral](#geral)
   - [Navegação](#navegação)
 - [Contribuidores](#contribuidores)
-- [FAQ](#faq)
 - [Créditos](#créditos)
+- [FAQ](#faq)
 
 ## Introdução
 
@@ -32,6 +32,6 @@
 
 ## Contribuidores
 
-##  faq
-
 ## Créditos
+
+##  faq
