@@ -1,6 +1,7 @@
 
 - [Introdução](#introdução)
 - [Screenshot](#screenshot)
+- [Dependências](#dependências)
 - [Instalação](#instalação)
   - [Opicional](#opicional)
   - [Comandos](#comandos)
@@ -15,6 +16,8 @@
 ## Introdução
 
 ## Screenshot
+
+## Dependências
 
 ## Instalação
 
