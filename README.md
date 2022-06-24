@@ -34,4 +34,4 @@
 
 ## Créditos
 
-##  faq
+## FAQ
