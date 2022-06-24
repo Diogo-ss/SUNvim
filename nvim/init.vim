@@ -102,8 +102,8 @@ vnoremap <S-up> <ESC>yyp :m .-1<CR>gv=gv
 nnoremap <C-g> :FloatermNew lazygit<CR>
 
 " Mapping
-map <C-A-n> :w <CR> :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
-map <C-m> :FloatermNew <CR>
+map <C-A-n> <ESC>:w<CR>:FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
+map <C-t> :FloatermNew<CR>
 
 " Save
 inoremap <C-s> <C-O>:w<CR>
