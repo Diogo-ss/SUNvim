@@ -18,6 +18,10 @@
 
 ## Instalação
 
+```shell
+git clone https://github.com/Diogo-ss/SSNvim.git ~/.config/sunvim --depth 1 ; rm -rf ~/.config/nvim ; mv ~/.config/sunvim/nvim ~/.config ; rm -rf ~/.config/sunvim ; nvim -c 'PlugInstall'
+```
+
 ## Comandos
 
 ## Opicional
