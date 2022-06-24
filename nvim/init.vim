@@ -33,9 +33,9 @@ call plug#end()
 " Plug 'andweeb/presence.nvim' "Presença do Discord (WSL1 ou Linux)
             
 " Lua////////customize do seu jeito/////////////////////////////////////////////////////////////////////////////////////////
-" lua <<EOF
-" print("Partiu 42! Vamo que vamo!")
-" EOF
+lua <<EOF
+ print(" ")
+EOF
 
 " Beta//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 " Commenting blocks of code ; para comentar e . para remover no modo visual
