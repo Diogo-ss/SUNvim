@@ -18,13 +18,13 @@
 ## Screenshot
 
 ## Dependências
-neovim>=07
-nodejs>=12
-vim-plug
+neovim >= 7.0 <p>
+nodejs >= 12.xx <p>
+Vim-plug <p>
 
-Dependência opcional:
-Clangd para C
-LzyGit
+Dependências opcionais:
+Clangd para C <p>
+LzyGit <p>
 
 
 ## Instalação
