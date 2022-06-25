@@ -25,7 +25,6 @@
 <a href="https://github.com/junegunn/vim-plug" target="_blank"> Vim-Plug</a> - Instalador dos Plugins<p>
 
 ### Dependências opcionais:
-<a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0 - Para projetos em C/C++<p>
 <a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a> - Para facilitar o uso do Git<p>
 
 ## Instalação 
