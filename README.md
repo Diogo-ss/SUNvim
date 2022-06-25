@@ -35,7 +35,34 @@ Após a instalação das dependências, execute o comando abaixo. Tenha o <a hre
 git clone https://github.com/Diogo-ss/SSNvim.git ~/.config/sunvim --depth 1 ; rm -rf ~/.config/nvim ; mv ~/.config/sunvim/nvim ~/.config ; rm -rf ~/.config/sunvim ; nvim -c 'PlugInstall'
 ```
 ## Linguagens
-Cada linguagem necessita de suporte indivídual para seu funcionamento no SUNvim, mas é simples. O autocomplete é o <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a> e toda sua documentação oficial está disponível em <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a>. Cada linguagem precisa de seu compilador e do seu <a href="" target="_blank"> Language servers </a>. As principais pode ser instaldas através dos comandos abaixo, instruções para outras linguagem <a href="" target="_blank"> aqui.</a><p>
+Cada linguagem necessita de suporte indivídual para seu funcionamento no SUNvim, mas é simples. O autocomplete é o <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a> e toda sua documentação oficial está disponível em <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a>. Cada linguagem precisa de seu compilador e do seu <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> Language servers </a>. As principais pode ser instaldas através dos comandos abaixo, instruções para outras linguagem <a href="" target="_blank"> aqui.</a><p>
+  
+### Python
+1° Instale o <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
+``` shell
+sudo apt install python3
+```
+2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+``` shell
+vim -v 'CocInstall coc-python'
+```
+<br />
+ 
+### C/C++
+1° - Instale o ```gcc```, ```g++``` e ```make```
+
+``` shell
+sudo apt-get install manpages-dev
+```
+2° - Instale <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0, para o autocomplete
+``` shell
+sudo apt-get install clangd-12
+```
+3° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+``` shell
+vim -v 'CocInstall coc-clangd'
+```
+  
 ## Opicional
 
 ## Recomendaçõe
