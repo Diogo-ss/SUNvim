@@ -110,7 +110,11 @@ function! Executar_float(arq)
     :w
 
     if &filetype == 'html'
-        :exec '!google-chrome' a:arq
+        :terminal live-server .
+    elseif &filetype == 'js'
+        :terminal live-server .
+    elseif &filetype == 'css'
+        :terminal live-server .
     elseif &filetype == 'python'
         :FloatermNew --autoclose=0 python3 % -o %<
     elseif &filetype == 'c'
