@@ -5,7 +5,7 @@
 - [Introdução](#introdução)
 - [Screenshot](#screenshot)
 - [Dependências](#dependências)
-- [Instalação (WSL/Linux](#instalação-(wsl/linux)
+- [Instalação](#instalação)
   - [Opicional](#opicional)
   - [Comandos](#comandos)
   - [Recomendaçõe](#recomendaçõe)
@@ -29,14 +29,14 @@
 <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0⠀-⠀para projetos em C/C++<p>
 <a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a>⠀-⠀para facilitar o uso do Git<p>
 
-## Instalação (WSL/Linux)
-
+## Instalação 
+### (WSL/Linux)
+Após a instalação das dependências, execute o comando abaixo. Tenha o <a href="https://git-scm.com/" target="_blank"> Git </a> instalado.<p>
 ```shell
 git clone https://github.com/Diogo-ss/SSNvim.git ~/.config/sunvim --depth 1 ; rm -rf ~/.config/nvim ; mv ~/.config/sunvim/nvim ~/.config ; rm -rf ~/.config/sunvim ; nvim -c 'PlugInstall'
 ```
-
 ## Comandos
-
+Cada linguagem necessita de suporte indivídual para seu funcionamento no SUNvim, mas é simples. O autocomplete é o <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a> toda documentação oficial está disponível em <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a>. Cada linguagem precisa de seu compilador e do seu <a href="" target="_blank"> Language servers </a>. Os principais pode ser instaldas através dos comandos abaixo, instruções para outras linguagem <a href="" target="_blank"> aqui </a><p>
 ## Opicional
 
 ## Recomendaçõe
