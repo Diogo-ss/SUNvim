@@ -43,7 +43,7 @@ sudo apt install python3
 ```
 2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-vim -v 'CocInstall coc-python'
+nvim -v 'CocInstall coc-python'
 ```
 <br />
  
@@ -59,7 +59,7 @@ sudo apt-get install clangd-12
 ```
 3° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-vim -v 'CocInstall coc-clangd'
+nvim -v 'CocInstall coc-clangd'
 ```
   
 ## Opicional
