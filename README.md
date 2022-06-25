@@ -53,10 +53,10 @@ nvim -v 'CocInstall coc-clangd'
 ```
 <br />
   
-### HTML
+### HTML, CSS e JS
 1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-html'
+nvim -v 'CocInstall coc-html coc-css coc-tsserver'
 ```
 <br />
 
@@ -65,13 +65,6 @@ nvim -v 'CocInstall coc-html'
 2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
 nvim -v 'CocInstall coc-java'
-```
-<br />
-
-### Javascript/Typescript
-1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-``` shell
-nvim -v 'CocInstall coc-tsserver'
 ```
 <br />
   
@@ -116,6 +109,19 @@ Para evitar travamentos adicione `stty -ixon` no `.bashrc`, faça isso com  coma
 ``` shell
 echo 'stty -ixon' >> ~/.bashrc
 ```
+## HTML, CSS e JS em termpo real
+1° - Instale o live server
+``` shell
+npm i -g live-server
+```
+2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+``` shell
+nvim -v 'CocInstall coc-html coc-css '
+```
+#### Para usar usar siga as instruções abaixo <p>
+1° - Acesse o `index.html` através do SUNvim e precione `F5`
+<br />
+
 
 ## Atalhos
 ## Atalhos gerais
