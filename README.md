@@ -123,7 +123,7 @@ sudo npm i -g live-server
 ``` shell
 nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 ```
-Para usar siga a instrução abaixo <p>
+Para usar siga a instruções abaixo <p>
 1° - Acesse o `index.html` através do SUNvim e precione `F5`, uma aba será aberta automaticamente em seu navegador padrão <p>
 2° - O site será atualizado assim que as alterções forem salvas com `Ctrl` + `s`
 <br />
