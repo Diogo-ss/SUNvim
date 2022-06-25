@@ -1,5 +1,3 @@
-noremap <A-m> <ESC>:split<CR>:resize -9<CR>:terminal<CR>
-
 " Pluguins//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 call plug#begin()
 
@@ -53,9 +51,12 @@ augroup END
 noremap <silent> ; :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> . :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
-"Add/remove Tab em blocks de cídigo
+"Add/remove Tab em blocks de código
 vmap <Tab> >gv
 vmap <S-Tab> <gv 
+
+" Deleta as linhas selecionadas
+vnoremap <BS> d
 
 " VSCode features///////////////////////////////////////////////////////////////////////////////////////////////////////////
 " Select all
@@ -114,22 +115,14 @@ function! Executar_float(arq)
         :FloatermNew --autoclose=0 python3 % -o %<
     elseif &filetype == 'c'
         :FloatermNew --autoclose=0 gcc % -o %< && ./%< 
+    elseif &filetype == 'rust'
+        :FloatermNew --autoclose=0 rustc % -o %< && ./%< 
     endif
 endfunction
 nnoremap <F5> :call Executar_float(shellescape(@%, 1))<CR>
 
-" Run code
-function! Executar(arq)
-    :w
-    if &filetype == 'html'
-        :exec '!google-chrome' a:arq
-    elseif &filetype == 'python'
-        :exec '!python3' a:arq
-    elseif &filetype == 'c'
-        :exec '!gcc -o /tmp/a.out' a:arq ';/tmp/a.out'
-    endif
-endfunction
-nnoremap <C-A-n> :call Executar(shellescape(@%, 1))<CR>
+" Terminal
+noremap <A-m> <ESC>:split<CR>:resize -9<CR>:set nonumber<CR>:terminal<CR>
 
 " Save
 inoremap <C-s> <C-O>:w<CR>
