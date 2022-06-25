@@ -21,12 +21,12 @@
 
 ## Dependências
 <a href="https://neovim.io/" target="_blank"> Neovim </a> >= 0.7.0<p>
-<a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 12.xx⠀-⠀necassário para o autocomplete<p>
-<a href="https://github.com/junegunn/vim-plug" target="_blank"> Vim-Plug</a>⠀-⠀instalador dos Plugins<p>
+<a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 12.xx - Necassário para o autocomplete<p>
+<a href="https://github.com/junegunn/vim-plug" target="_blank"> Vim-Plug</a> - Instalador dos Plugins<p>
 
 ### Dependências opcionais:
-<a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0⠀-⠀para projetos em C/C++<p>
-<a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a> - para facilitar o uso do Git<p>
+<a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0 - Para projetos em C/C++<p>
+<a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a> - Para facilitar o uso do Git<p>
 
 ## Instalação 
 ### (WSL/Linux)
