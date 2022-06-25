@@ -116,7 +116,7 @@ npm i -g live-server
 ```
 2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-html coc-css '
+nvim -v 'CocInstall coc-html coc-css coc-tsserver'
 ```
 #### Para usar usar siga as instruções abaixo <p>
 1° - Acesse o `index.html` através do SUNvim e precione `F5`
