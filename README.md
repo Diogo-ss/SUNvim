@@ -8,8 +8,8 @@
 - [Instalação](#instalação)
   - [Linguagens](#linguagens)
   - [Recomendaçõe](#recomendaçõe)
-- [Atalhos)](#atalhos)
-  - [Atlhos gerais](#atlhos-gerais)
+- [Atalhos](#atalhos)
+  - [Atalhos gerais](#atalhos-gerais)
   - [Navegação](#navegação)
 - [Contribuidores](#contribuidores)
 - [Créditos](#créditos)
@@ -113,9 +113,9 @@ nvim -c 'CocInstall coc-rust-analyzer'
 ## Opicional
 
 ## Recomendaçõe
-
-## Atlhos gerais
-
+## Atalhos
+## Atalhos gerais
+## Navegação
 ## Geral
 
 ## Navegação
