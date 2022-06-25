@@ -49,14 +49,14 @@ sudo apt-get install clangd-12
 ```
 3° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-clangd'
+nvim -c 'CocInstall coc-clangd'
 ```
 <br />
   
 ### HTML, CSS e JS
 1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-html coc-css coc-tsserver'
+nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 ```
 <br />
 
@@ -64,21 +64,21 @@ nvim -v 'CocInstall coc-html coc-css coc-tsserver'
 1° instale o <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"> Java JDK </a >>= 11<p>
 2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-java'
+nvim -c 'CocInstall coc-java'
 ```
 <br />
   
 ### JSON
 1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-json'
+nvim -c 'CocInstall coc-json'
 ```
 <br />
 
 ### Lua
 1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-sumneko-lua'
+nvim -c 'CocInstall coc-sumneko-lua'
 ```
 <br />
 
@@ -89,7 +89,7 @@ sudo apt install python3
 ```
 2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-python'
+nvim -c 'CocInstall coc-python'
 ```
 <br />
  
@@ -121,7 +121,7 @@ sudo npm i -g live-server
 
 2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-nvim -v 'CocInstall coc-html coc-css coc-tsserver'
+nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 ```
 #### Para usar siga a instrução abaixo <p>
 1° - Acesse o `index.html` através do SUNvim e precione `F5`
