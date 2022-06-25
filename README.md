@@ -114,11 +114,16 @@ echo 'stty -ixon' >> ~/.bashrc
 ``` shell
 npm i -g live-server
 ```
+Caso a instalção acima dê algum erro execute o código abaixo
+``` shell
+sudo npm i -g live-server
+```
+
 2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
 nvim -v 'CocInstall coc-html coc-css coc-tsserver'
 ```
-#### Para usar usar siga as instruções abaixo <p>
+#### Para usar siga a instrução abaixo <p>
 1° - Acesse o `index.html` através do SUNvim e precione `F5`
 <br />
 
