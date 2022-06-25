@@ -61,6 +61,17 @@ sudo apt-get install clangd-12
 ``` shell
 nvim -v 'CocInstall coc-clangd'
 ```
+<br />
+ 
+### Rust
+1° - Instale o <a href="https://www.rust-lang.org" target="_blank"> Rust</a>
+``` shell
+sudo apt install rustc
+```
+2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+``` shell
+nvim -c 'CocInstall coc-rust-analyzer'
+```
   
 ## Opicional
 
