@@ -35,7 +35,7 @@ Após a instalação das dependências, execute o comando abaixo. Tenha o <a hre
 git clone https://github.com/Diogo-ss/SSNvim.git ~/.config/sunvim --depth 1 ; rm -rf ~/.config/nvim ; mv ~/.config/sunvim/nvim ~/.config ; rm -rf ~/.config/sunvim ; nvim -c 'PlugInstall'
 ```
 ## Linguagens
-Cada linguagem necessita de suporte indivídual para seu funcionamento no SUNvim, mas é simples. O autocomplete é o <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a> toda documentação oficial está disponível em <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a>. Cada linguagem precisa de seu compilador e do seu <a href="" target="_blank"> Language servers </a>. Os principais pode ser instaldas através dos comandos abaixo, instruções para outras linguagem <a href="" target="_blank"> aqui </a><p>
+Cada linguagem necessita de suporte indivídual para seu funcionamento no SUNvim, mas é simples. O autocomplete é o <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a> e toda sua documentação oficial está disponível em <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a>. Cada linguagem precisa de seu compilador e do seu <a href="" target="_blank"> Language servers </a>. As principais pode ser instaldas através dos comandos abaixo, instruções para outras linguagem <a href="" target="_blank"> aqui.</a><p>
 ## Opicional
 
 ## Recomendaçõe
