@@ -112,8 +112,8 @@ nvim -c 'CocInstall coc-rust-analyzer'
 
 ## Opicional
 
-## Recomendaçõe
-Para evitar travamentos adicione `stty -ixon` no .bashrc, faça isso com  comando abaixo.
+## Recomendações
+Para evitar travamentos adicione `stty -ixon` no `.bashrc`, faça isso com  comando abaixo.
 ``` shell
 echo 'stty -ixon' >> ~/.bashrc
 ```
