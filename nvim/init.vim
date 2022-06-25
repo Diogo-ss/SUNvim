@@ -1,3 +1,5 @@
+noremap <A-m> <ESC>:split<CR>:resize -9<CR>:terminal<CR>
+
 " Pluguins//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 call plug#begin()
 
@@ -34,7 +36,7 @@ call plug#end()
             
 " Lua////////customize do seu jeito/////////////////////////////////////////////////////////////////////////////////////////
 lua <<EOF
- print("HI!")
+ print("Partiu 42! Vamo que vamo!")
 EOF
 
 " Beta//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,9 +63,6 @@ map <C-a> ggVG
 
 " Cut
 map <C-x> c
-
-" Redo
-"map <C-r> :redo<CR>
 
 " Desfaz linha por linha qundo usa U
 "inoremap <silent> <cr> <c-z>u<cr>
@@ -101,9 +100,36 @@ vnoremap <S-up> <ESC>yyp :m .-1<CR>gv=gv
 " Git
 nnoremap <C-g> :FloatermNew lazygit<CR>
 
-" Mapping
-map <C-A-n> <ESC>:w<CR>:FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
+" Mapping terminal
 map <C-t> :FloatermNew<CR>
+" map <C-A-n> <ESC>:w<CR>:FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
+
+" Run Code FloatermNew por Fábio Berbert de Paula em Viva ao Linux
+function! Executar_float(arq)
+    :w
+
+    if &filetype == 'html'
+        :exec '!google-chrome' a:arq
+    elseif &filetype == 'python'
+        :FloatermNew --autoclose=0 python3 % -o %<
+    elseif &filetype == 'c'
+        :FloatermNew --autoclose=0 gcc % -o %< && ./%< 
+    endif
+endfunction
+nnoremap <F5> :call Executar_float(shellescape(@%, 1))<CR>
+
+" Run code
+function! Executar(arq)
+    :w
+    if &filetype == 'html'
+        :exec '!google-chrome' a:arq
+    elseif &filetype == 'python'
+        :exec '!python3' a:arq
+    elseif &filetype == 'c'
+        :exec '!gcc -o /tmp/a.out' a:arq ';/tmp/a.out'
+    endif
+endfunction
+nnoremap <C-A-n> :call Executar(shellescape(@%, 1))<CR>
 
 " Save
 inoremap <C-s> <C-O>:w<CR>
