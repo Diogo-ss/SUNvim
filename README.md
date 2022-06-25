@@ -26,7 +26,7 @@
 
 ### Dependências opcionais:
 <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0⠀-⠀para projetos em C/C++<p>
-<a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a>⠀-⠀para facilitar o uso do Git<p>
+<a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a> - para facilitar o uso do Git<p>
 
 ## Instalação 
 ### (WSL/Linux)
