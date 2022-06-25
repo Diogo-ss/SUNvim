@@ -5,7 +5,7 @@
 - [Introdução](#introdução)
 - [Screenshot](#screenshot)
 - [Dependências](#dependências)
-- [Instalação](#instalação)
+- [Instalação (WSL/Linux](#instalação-(wsl/linux)
   - [Opicional](#opicional)
   - [Comandos](#comandos)
   - [Recomendaçõe](#recomendaçõe)
