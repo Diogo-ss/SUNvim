@@ -113,17 +113,28 @@ function! Executar_float(arq)
         :terminal live-server .
     elseif &filetype == 'js'
         :terminal live-server .
+    elseif &filetype == 'cpp'
+        :split
+        :resize -9
+        :set nonumber
+        :terminal g++ % -o %< && ./%<
     elseif &filetype == 'css'
         :terminal live-server .
     elseif &filetype == 'python'
         :FloatermNew --autoclose=0 python3 % -o %<
     elseif &filetype == 'c'
-        :FloatermNew --autoclose=0 gcc % -o %< && ./%< 
+        " ":FloatermNew --autoclose=0 zsh gcc % -o %< && ./%< 
+        :split
+        :resize -9
+        :set nonumber
+        :terminal gcc % -o %< && ./%<
     elseif &filetype == 'rust'
         :FloatermNew --autoclose=0 rustc % -o %< && ./%< 
     endif
 endfunction
 nnoremap <F5> :call Executar_float(shellescape(@%, 1))<CR>
+vnoremap <F5> <ESC>:call Executar_float(shellescape(@%, 1))<CR>
+inoremap <F5> <ESC>:call Executar_float(shellescape(@%, 1))<CR>
 
 " Terminal
 noremap <A-m> <ESC>:split<CR>:resize -9<CR>:set nonumber<CR>:terminal<CR>
