@@ -2,14 +2,14 @@
 call plug#begin()
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
-Plug 'mfussenegger/nvim-dap'
+"Plug 'mfussenegger/nvim-dap' "DEBUG in lua
 Plug 'neovim/nvim-lspconfig' "LPS https://www.jakewiesler.com/blog/getting-started-with-vim
 Plug 'nvim-lua/plenary.nvim' "Dependênci do Telescope
 Plug 'nvim-telescope/telescope.nvim' "Localiza arquivos
 " Plug 'wakatime/vim-wakatime' "WakaTime
 Plug 'vim-airline/vim-airline' "barra inferior
 Plug 'vim-airline/vim-airline-themes' "temas da barra inferior
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Theme
 Plug 'navarasu/onedark.nvim' "one dark mode
 Plug 'kyazdani42/nvim-web-devicons' "icones geral
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' } "gerencidor de abas
