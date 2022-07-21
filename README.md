@@ -23,9 +23,9 @@
 
 ## Dependências
 <a href="https://neovim.io/" target="_blank"> Neovim </a> >= 0.7.0<p>
-<a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 12.xx - Necassário para o autocomplete <p>
+<a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 12.xx - Necessário para o autocomplete <p>
 <a href="https://github.com/junegunn/vim-plug" target="_blank"> Vim-Plug</a> - Instalador dos Plugins <p>
-<a href="https://www.nerdfonts.com/" target="_blank"> Nerd Fonts </a> - Necassária para os ícones <p>
+<a href="https://www.nerdfonts.com/" target="_blank"> Nerd Fonts </a> - Necessário para os ícones <p>
   
 ### Dependências opcionais:
 <a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a> - Para facilitar o uso do Git<p>
