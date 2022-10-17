@@ -62,7 +62,10 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- NvimTree
-map('n', '<C-n>', '<CMD>NvimTreeToggle <CR>')									-- selecionar tudo no modo normal
+map('n', '<C-n>', '<CMD>NvimTreeToggle <CR>')				-- selecionar tudo no modo normal
 
 map('v', '<TAB>', '>gv')									-- selecionar tudo no modo normal
 map('v', '<S-TAB>', '<gv')									-- selecionar tudo no modo normal
+
+vc [[ map <C-d> :FloatermToggle<CR> ]]
+-- map('n', 'C-t', '<CMD>FloatermNew <CR>')									-- selecionar tudo no modo normal

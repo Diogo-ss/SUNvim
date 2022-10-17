@@ -18,6 +18,7 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'ryanoasis/vim-devicons' 									" Icons for plugins (NERDTree)
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 					" Color for icons
 Plug 'sheerun/vim-polyglot' 									" Better sintax
+Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 " Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 
 call plug#end()
