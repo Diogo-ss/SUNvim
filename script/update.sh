@@ -15,7 +15,7 @@ logo()
 # cheacar por atualização
 function check()
 {
-	git merge origin/master 
+	git merge
 	if [ $(git status --porcelain | wc -l) -eq "0" ]; then
   		echo
 		echo "🟢 Your SUNvim is last vesrion."
