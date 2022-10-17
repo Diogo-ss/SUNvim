@@ -80,4 +80,5 @@ function install_update()
 
 # iniciar script
 # install_update
+logo
 update
