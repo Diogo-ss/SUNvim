@@ -93,5 +93,5 @@ map('n', '<A-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<C
 
 -- ranger
 map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')			-- abre o Ranger no diretório atual
-map('n', '<leader>tt', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')			-- abre o Ranger no diretório atual
+map('n', '<leader>uu', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')			-- abre o Ranger no diretório atual
 
