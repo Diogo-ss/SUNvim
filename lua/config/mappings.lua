@@ -30,8 +30,8 @@ map('n', '<C-\\>', '<CMD>vsplit<CR>')						-- divide o buffer verticalmente
 map('n', '<A-\\>', '<CMD>split<CR>')						-- divide o buffer horizontalmente
 
 -- split resize
-vc [[ nnoremap <silent> <C-A-l> :vertical resize +3<CR> ]]	-- redimenciona o buffer vertical para a direita
-vc [[ nnoremap <silent> <C-A-h> :vertical resize -3<CR> ]]	-- redimendiona o buffer vertical para a esquerda
+vc [[ nnoremap <silent> <C-A-h> :vertical resize +3<CR> ]]	-- redimenciona o buffer vertical para a esquerda
+vc [[ nnoremap <silent> <C-A-l> :vertical resize -3<CR> ]]	-- redimendiona o buffer vertical para a direita
 vc [[ nnoremap <silent> <C-A-j> :resize -3<CR> ]]			-- redimensiona o buffer horizontal para baixo
 vc [[ nnoremap <silent> <C-A-k> :resize +3<CR> ]]			-- redimensiona o buffer horizontal para cima
 
@@ -64,8 +64,28 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- NvimTree
 map('n', '<C-n>', '<CMD>NvimTreeToggle <CR>')				-- selecionar tudo no modo normal
 
+-- selecinar tudo
 map('v', '<TAB>', '>gv')									-- selecionar tudo no modo normal
 map('v', '<S-TAB>', '<gv')									-- selecionar tudo no modo normal
 
-vc [[ map <C-d> :FloatermToggle<CR> ]]
--- map('n', 'C-t', '<CMD>FloatermNew <CR>')									-- selecionar tudo no modo normal
+
+-- atalho da abas
+vim.cmd([[
+" nnoremap <Tab> :BufferLineCyclePrev<CR>
+" nnoremap <silent><C-PageUp> :BufferLineCycleNext<CR>
+" nnoremap <silent><C-PageDown> :BufferLineCyclePrev<CR>
+nnoremap <silent><C-A-PageUp> :BufferLineMoveNext<CR>
+nnoremap <silent><C-A-PageDown> :BufferLineMovePrev<CR>
+nnoremap <silent><C-w> :BufferLinePickClose<CR>
+nnoremap <silent><C-w> :BufferLinePickClose<CR>
+]])
+
+map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
+map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
+map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
+
+
+-- terminal
+map('n', '<C-d>', '<CMD>FloatermToggle<CR>')														-- terminal flutuante
+map('n', '<C-t>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
+map('n', '<C-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
