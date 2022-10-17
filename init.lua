@@ -1,6 +1,7 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
+Plug 'lewis6991/gitsigns.nvim'									" Indicadores git
 Plug 'goolord/alpha-nvim'										" Tela inicial
 Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
 " Plug 'glepnir/dashboard-nvim'
@@ -42,5 +43,6 @@ require ('plugins.iconsunicode')
 require ('plugins.indent_blankline')
 require ('plugins.buffer')
 require ('plugins.alpha')
+require ('plugins.gitsigns')
 -- require ('config.options')
 -- require ('plugins.dashboard')

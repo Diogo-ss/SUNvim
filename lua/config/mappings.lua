@@ -6,7 +6,7 @@ end
 -- forçar saída
 map('n', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode normal
 map('v', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode visual	
-map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir					
+map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
 
 -- salvar alterações
 map('n', '<C-s>', '<CMD>w<CR>')								-- salva alerações no modo normal
@@ -71,9 +71,6 @@ map('v', '<S-TAB>', '<gv')									-- selecionar tudo no modo normal
 
 -- atalho da abas
 vim.cmd([[
-" nnoremap <Tab> :BufferLineCyclePrev<CR>
-" nnoremap <silent><C-PageUp> :BufferLineCycleNext<CR>
-" nnoremap <silent><C-PageDown> :BufferLineCyclePrev<CR>
 nnoremap <silent><C-A-PageUp> :BufferLineMoveNext<CR>
 nnoremap <silent><C-A-PageDown> :BufferLineMovePrev<CR>
 nnoremap <silent><C-w> :BufferLinePickClose<CR>
@@ -87,11 +84,10 @@ map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
 
 
 -- terminal
-map('n', '<A-t>', '<CMD>FloatermToggle<CR>')														-- terminal flutuante
+map('n', '<A-t>', '<CMD>FloatermToggle<CR>')																					-- terminal flutuante
 map('n', '<A-i>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
 map('n', '<A-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
 
 -- ranger
-map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')			-- abre o Ranger no diretório atual
-map('n', '<leader>uu', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')			-- abre o Ranger no diretório atual
-
+map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')																			-- abre o Ranger no diretório atual
+map('n', '<leader>uu', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')										-- abre o Ranger no diretório atual
