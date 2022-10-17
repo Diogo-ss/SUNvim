@@ -1,6 +1,7 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
+Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'terrortylor/nvim-comment'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 				"Autocomplete
@@ -38,3 +39,4 @@ require ('plugins.lualine')
 require ('plugins.buffer')
 require ('plugins.theme')
 require ('plugins.iconsunicode')
+require ('plugins.dashboard')
