@@ -70,9 +70,9 @@ function rs()
 # instalar atualização
 function install_update()
 {
-	pwd
-# 	git pull
-	git reset --hard origin/master
+	git reset --hard @{u}
+	git clean -df
+	
 	echo "🟢 SUNvim upgrade finish."
 	rs
 
