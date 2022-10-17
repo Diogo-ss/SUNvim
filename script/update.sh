@@ -79,5 +79,5 @@ function install_update()
 }
 
 # iniciar script
+# install_update
 update
-install_update
