@@ -1,6 +1,7 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
+Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
 " Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'terrortylor/nvim-comment'
@@ -39,4 +40,5 @@ require ('plugins.lualine')
 require ('plugins.buffer')
 require ('plugins.theme')
 require ('plugins.iconsunicode')
+require ('plugins.indent_blankline')
 -- require ('plugins.dashboard')
