@@ -86,6 +86,6 @@ map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
 
 
 -- terminal
-map('n', '<C-d>', '<CMD>FloatermToggle<CR>')														-- terminal flutuante
-map('n', '<C-t>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
-map('n', '<C-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
+map('n', '<A-t>', '<CMD>FloatermToggle<CR>')														-- terminal flutuante
+map('n', '<A-i>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
+map('n', '<A-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
