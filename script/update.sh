@@ -54,6 +54,26 @@ function install_update()
 	echo "🟢 SUNvim upgrade finish."
 }
 
+function rs()
+{
+	while true; do
+	
+	clear
+	read -p "🟡 Restart now to apply changes? (y/n) " yn
+
+	case $yn in 
+		[yY] ) 
+			killall nvim && nvim /home/$USER/.config/nvim/script/fix_list.txt
+			break;;
+		[nN] ) 
+			echo "🟢 OK! SUNvim upgrade finish."
+			exit;;
+		* ) echo "⚪ Invaled option";;
+	esac
+
+	done
+}
+
 # iniciar script
 logo
 check
