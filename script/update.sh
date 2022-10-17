@@ -47,12 +47,6 @@ function update()
 	done
 }
 
-# instalar atualização
-function install_update()
-{
-	git pull
-	echo "🟢 SUNvim upgrade finish."
-}
 
 function rs()
 {
@@ -72,6 +66,15 @@ function rs()
 	esac
 
 	done
+}
+
+# instalar atualização
+function install_update()
+{
+	git pull
+	echo "🟢 SUNvim upgrade finish."
+	rs
+
 }
 
 # iniciar script
