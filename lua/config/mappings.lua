@@ -80,6 +80,7 @@ nnoremap <silent><C-w> :BufferLinePickClose<CR>
 nnoremap <silent><C-w> :BufferLinePickClose<CR>
 ]])
 
+-- abas
 map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
 map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
 map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
@@ -89,3 +90,8 @@ map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
 map('n', '<A-t>', '<CMD>FloatermToggle<CR>')														-- terminal flutuante
 map('n', '<A-i>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
 map('n', '<A-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
+
+-- ranger
+map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')			-- abre o Ranger no diretório atual
+map('n', '<leader>tt', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')			-- abre o Ranger no diretório atual
+
