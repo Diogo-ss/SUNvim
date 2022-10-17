@@ -1,13 +1,14 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
+Plug 'goolord/alpha-nvim'										" Tela inicial
 Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
 " Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'terrortylor/nvim-comment'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 				"Autocomplete
-Plug 'neovim/nvim-lspconfig' 									"LPS https://www.jakewiesler.com/blog/getting-started-with-vim
-Plug 'nvim-lua/plenary.nvim' 									"Dependênci do Telescope
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 				" Autocomplete
+Plug 'neovim/nvim-lspconfig' 									" LPS https://www.jakewiesler.com/blog/getting-started-with-vim
+Plug 'nvim-lua/plenary.nvim' 									" Dependênci do Telescope
 Plug 'nvim-telescope/telescope.nvim' 							" Localiza arquivos
 Plug 'navarasu/onedark.nvim' 									" One dark mode
 Plug 'kyazdani42/nvim-web-devicons' 							" Icones geral
@@ -28,7 +29,6 @@ call plug#end()
 
 require ('config.settings')
 require ('config.mappings')
-require ('config.options')
 require ('config.comment')
 
 -- plugins config
@@ -37,8 +37,10 @@ require ('plugins.nvimtree')
 require ('plugins.telescope')
 require ('plugins.rainbow_parentheses')
 require ('plugins.lualine')
-require ('plugins.buffer')
 require ('plugins.theme')
 require ('plugins.iconsunicode')
 require ('plugins.indent_blankline')
+require ('plugins.buffer')
+require ('plugins.alpha')
+-- require ('config.options')
 -- require ('plugins.dashboard')
