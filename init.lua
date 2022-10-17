@@ -15,7 +15,6 @@ Plug 'navarasu/onedark.nvim' 									" One dark mode
 Plug 'kyazdani42/nvim-web-devicons' 							" Icones geral
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' } 				" Gerencidor de abas
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 	" TSInstall C (dependência do Telescope)
-Plug 'Raimondi/delimitMate' 									" Auto par () {} []
 Plug 'kien/rainbow_parentheses.vim' 							" Cor dos pares de () {} []
 Plug 'Xuyuanp/nerdtree-git-plugin'								" Nerdtree git plugin
 Plug 'nvim-tree/nvim-tree.lua'
@@ -44,5 +43,5 @@ require ('plugins.indent_blankline')
 require ('plugins.buffer')
 require ('plugins.alpha')
 require ('plugins.gitsigns')
+require ('plugins.coc_settings')
 -- require ('config.options')
--- require ('plugins.dashboard')
