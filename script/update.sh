@@ -17,7 +17,7 @@ function check()
 {
 	if [ $(git status --porcelain | wc -l) -eq "0" ]; then
   		echo
-		echo "🟢 You SUNvim is last vesrion."
+		echo "🟢 Your SUNvim is last vesrion."
 	else
 		echo
   		echo "🔴 You SUNvim is old version"
@@ -51,8 +51,6 @@ function update()
 function rs()
 {
 	while true; do
-	
-	clear
 	read -p "🟡 Restart now to apply changes? (y/n) " yn
 
 	case $yn in 
@@ -71,7 +69,9 @@ function rs()
 # instalar atualização
 function install_update()
 {
-	git pull
+	pwd
+# 	git pull
+	git reset --hard origin/master
 	echo "🟢 SUNvim upgrade finish."
 	rs
 
