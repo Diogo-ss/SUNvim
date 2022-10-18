@@ -60,6 +60,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')				-- selecionar tudo no modo normal
 
 -- NvimTree
 map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')				-- selecionar tudo no modo normal
@@ -82,11 +83,14 @@ map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerd
 map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
 map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
 
+map('n', '<leader>t', '<CMD>ToggleTerm size=15 direction=horizontal<CR>')				-- selecionar tudo no modo normal
+map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')				-- selecionar tudo no modo normal
+map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')				-- selecionar tudo no modo normal
 
 -- terminal
-map('n', '<A-t>', '<CMD>FloatermToggle<CR>')																					-- terminal flutuante
-map('n', '<A-i>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
-map('n', '<A-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
+-- map('n', '<A-t>', '<CMD>FloatermToggle<CR>')																					-- terminal flutuante
+-- map('n', '<A-i>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
+-- map('n', '<A-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
 
 -- ranger
 map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')																			-- abre o Ranger no diretório atual

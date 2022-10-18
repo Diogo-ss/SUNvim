@@ -1,7 +1,9 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'} 					"  Terminal flutuante
+Plug 'norcalli/nvim-colorizer.lua' 								" Exiba a cor do código da cor
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} 			" Multi cursor
 Plug 'dundalek/lazy-lsp.nvim' 									" aut install lsp
 Plug 'lewis6991/gitsigns.nvim'									" Indicadores git
 Plug 'goolord/alpha-nvim'										" Tela inicial
@@ -23,7 +25,6 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'ryanoasis/vim-devicons' 									" Icons for plugins (NERDTree)
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 					" Color for icons
 Plug 'sheerun/vim-polyglot' 									" Better sintax
-Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 " Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 
 call plug#end()
@@ -48,4 +49,6 @@ require ('plugins.gitsigns')
 require ('plugins.coc_settings')
 require ('plugins.vim_treesitter')
 require ('plugins.lsp_config')
+require ('plugins.colorizer')
+require ('plugins.toggleterm')
 -- require ('plugins.lazy_lsp')
