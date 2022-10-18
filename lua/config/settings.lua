@@ -18,6 +18,7 @@ o.undofile = true						-- ativa o desfazer
 
 -- definições básicas - vimscript
 cmd [[ set cursorline ]]				-- destaca a linha atual do cursor
+cmd [[ set noshowmode ]]				-- oculta o modo na barra inferior
 cmd [[ set clipboard+=unnamedplus ]]	-- suporte à área de tranferência
 
 -- configurações split - melhoria
