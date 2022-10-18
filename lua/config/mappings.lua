@@ -62,7 +62,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- NvimTree
-map('n', '<A-p>', '<CMD>NvimTreeToggle <CR>')				-- selecionar tudo no modo normal
+map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')				-- selecionar tudo no modo normal
 
 -- selecinar tudo
 map('v', '<TAB>', '>gv')									-- selecionar tudo no modo normal
