@@ -1,6 +1,7 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
+Plug 'dundalek/lazy-lsp.nvim' 									" aut install lsp
 Plug 'lewis6991/gitsigns.nvim'									" Indicadores git
 Plug 'goolord/alpha-nvim'										" Tela inicial
 Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
@@ -45,3 +46,5 @@ require ('plugins.alpha')
 require ('plugins.gitsigns')
 require ('plugins.coc_settings')
 require ('plugins.vim_treesitter')
+require ('plugins.lsp_config')
+-- require ('plugins.lazy_lsp')
