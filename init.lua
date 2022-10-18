@@ -1,6 +1,7 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dundalek/lazy-lsp.nvim' 									" aut install lsp
 Plug 'lewis6991/gitsigns.nvim'									" Indicadores git
 Plug 'goolord/alpha-nvim'										" Tela inicial
