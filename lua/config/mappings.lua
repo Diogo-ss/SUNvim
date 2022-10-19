@@ -109,6 +109,6 @@ map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- 
 map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
 -- ranger
-map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')										-- abre o Ranger no diretório atual
+map('n', '<leader>rr', '<CMD>TermExec size=10 direction=float cmd=ranger<CR>')										-- abre o Ranger no diretório atual
 map('n', '<leader>uu', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')	-- abre o Ranger no diretório atual
 
