@@ -60,7 +60,7 @@ function install_update()
 {
 	git reset --hard @{u}
 	git clean -df
-	git pull --depth 1
+	git pull
 	echo "🟢 SUNvim upgrade finish."
 	
 	while true; do
