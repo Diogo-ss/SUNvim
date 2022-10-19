@@ -3,7 +3,7 @@
 # logo SUNvim
 logo()
 {
-	# clear
+	clear
 	echo "  
 ▒█▀▀▀█ ▒█░▒█ ▒█▄░▒█ ▀█░█▀ ░▀░ █▀▄▀█ 　 ▒█▀▀█ █░░█ █▀▀ █▀▀ █░█ 
 ░▀▀▀▄▄ ▒█░▒█ ▒█▒█▒█ ░█▄█░ ▀█▀ █░▀░█ 　 ▒█░░░ █▀▀█ █▀▀ █░░ █▀▄ 
@@ -41,7 +41,8 @@ function update()
 			install_update
 			break;;
 		[nN] ) 
-			echo "⚫ Canceled"
+			echo
+			echo "⚫ Canceled - type 'exit' or press 'CTRL + d' to close"
 			exit;;
 		* ) echo "⚪ Invaled option";;
 	esac
