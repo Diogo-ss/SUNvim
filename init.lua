@@ -36,7 +36,7 @@ require ('config.comment')
 
 -- plugins config
 require ('plugins.settings')
-require ('plugins.nvimtree')
+require ('plugins.nvim_tree')
 require ('plugins.telescope')
 require ('plugins.rainbow_parentheses')
 require ('plugins.lualine')
