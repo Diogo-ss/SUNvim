@@ -6,6 +6,11 @@ require("nvim-tree").setup()
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
+    hide_root_folder = true,
+    side = "left",
+    number = false,
+    relativenumber = false,
+    signcolumn = "yes",
     adaptive_size = true,
     mappings = {
       list = {
