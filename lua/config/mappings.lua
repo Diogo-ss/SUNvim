@@ -9,7 +9,7 @@ map('v', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode visual
 map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
 
 -- salvar alterações
-map('n', '<C-s>', '<CMD>w<CR>')								-- salva alerações no modo normal
+map('n', '<C-s>', '<CMD>w<CR>', {silent = true, noremap = true})								-- salva alerações no modo normal
 
 -- mover linhas
 map('n', '<A-j>', '<CMD>m .+1<CR>==')						-- move a linha atual para baixo no modo normal
@@ -60,15 +60,40 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')				-- selecionar tudo no modo normal
+map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')	-- selecionar tudo no modo normal
 
 -- NvimTree
-map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')				-- selecionar tudo no modo normal
+map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')			-- selecionar tudo no modo normal
 
 -- selecinar tudo
 map('v', '<TAB>', '>gv')									-- selecionar tudo no modo normal
 map('v', '<S-TAB>', '<gv')									-- selecionar tudo no modo normal
 
+-- abas
+map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
+map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
+map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
+
+-- trouble
+-- Lua
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+  {silent = true, noremap = true}
+)
 
 -- atalho da abas
 vim.cmd([[
@@ -78,20 +103,12 @@ nnoremap <silent><C-w> :BufferLinePickClose<CR>
 nnoremap <silent><C-w> :BufferLinePickClose<CR>
 ]])
 
--- abas
-map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
-map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
-map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
-
-map('n', '<leader>t', '<CMD>ToggleTerm size=15 direction=horizontal<CR>')				-- selecionar tudo no modo normal
-map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')				-- selecionar tudo no modo normal
-map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')				-- selecionar tudo no modo normal
-
 -- terminal
--- map('n', '<A-t>', '<CMD>FloatermToggle<CR>')																					-- terminal flutuante
--- map('n', '<A-i>', '<CMD>split<CR><CMD>resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')		-- terminal horizontal
--- map('n', '<A-m>', '<CMD>vsplit<CR><CMD>vertical resize -6<CR><CMD>set nonumber<CR><CMD>terminal<CR>i')							-- terminal vertical
+map('n', '<leader>t', '<CMD>ToggleTerm size=15 direction=horizontal<CR>')					-- selecionar tudo no modo normal
+map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- selecionar tudo no modo normal
+map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
 -- ranger
-map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')																			-- abre o Ranger no diretório atual
-map('n', '<leader>uu', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')										-- abre o Ranger no diretório atual
+map('n', '<leader>rr', '<CMD>FloatermNew ranger<CR>')										-- abre o Ranger no diretório atual
+map('n', '<leader>uu', '<CMD>FloatermNew sh /home/diogo/.config/nvim/script/update.sh<CR>')	-- abre o Ranger no diretório atual
+

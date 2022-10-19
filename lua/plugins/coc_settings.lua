@@ -25,7 +25,7 @@ keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r
 
 -- color pop up
 vim.cmd([[
-hi CocSearch ctermfg=12 guifg=#18A3FF " Cor do texto digitado
-hi CocMenuSel ctermbg=109 guibg=#181b20 " Cor do fundo
+hi CocSearch ctermfg=12 guifg=#4fa6ed " Cor do texto digitado
+" hi CocMenuSel ctermbg=109 guibg=#181b20 " Cor do fundo
 ]])
 

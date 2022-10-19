@@ -10,7 +10,7 @@ Plug 'goolord/alpha-nvim'										" Tela inicial
 Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
 " Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'terrortylor/nvim-comment'
+" Plug 'terrortylor/nvim-comment'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 				" Autocomplete
 Plug 'neovim/nvim-lspconfig' 									" LPS https://www.jakewiesler.com/blog/getting-started-with-vim
 Plug 'nvim-lua/plenary.nvim' 									" Dependênci do Telescope
@@ -25,6 +25,8 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'ryanoasis/vim-devicons' 									" Icons for plugins (NERDTree)
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 					" Color for icons
 Plug 'sheerun/vim-polyglot' 									" Better sintax
+Plug 'folke/trouble.nvim' 										" lista os erros do código
+Plug 'dense-analysis/ale' 										" Icones do diagnostics
 " Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 
 call plug#end()
@@ -51,4 +53,6 @@ require ('plugins.vim_treesitter')
 require ('plugins.lsp_config')
 require ('plugins.colorizer')
 require ('plugins.toggleterm')
+require ('plugins.trouble')
+require ('plugins.ale_sign')
 -- require ('plugins.lazy_lsp')
