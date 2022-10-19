@@ -73,6 +73,7 @@ map('v', '<S-TAB>', '<gv')									-- selecionar tudo no modo normal
 map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
 map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
 map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
+map('n', '<leader>p', '<CMD>BufferLineTogglePin<CR>')			-- fechar aba
 
 -- trouble
 -- Lua
