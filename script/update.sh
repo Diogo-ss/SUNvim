@@ -42,7 +42,7 @@ function update()
 			break;;
 		[nN] ) 
 			echo
-			echo "⚫ Canceled - type 'exit' or press 'CTRL + d' to close"
+			echo "⚫ Canceled - Type 'exit' or press 'CTRL + d' to close"
 			exit;;
 		* ) echo "⚪ Invaled option";;
 	esac
