@@ -60,7 +60,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')	-- selecionar tudo no modo normal
+-- map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')	-- selecionar tudo no modo normal
 
 -- NvimTree
 map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')			-- selecionar tudo no modo normal
@@ -112,5 +112,6 @@ map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- sel
 -- ranger
 map('n', '<leader>rr', '<CMD>TermExec size=10 direction=float cmd=ranger<CR>')										-- abre o Ranger no diretório atual
 map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
+map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim update
 map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	-- SUNvim update
 
