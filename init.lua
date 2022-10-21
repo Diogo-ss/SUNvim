@@ -28,7 +28,7 @@ Plug 'folke/trouble.nvim' 										" lista os erros do código
 Plug 'dense-analysis/ale' 										" Icones do diagnostics
 " Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 
-" temas
+" temas --
 Plug 'navarasu/onedark.nvim' 									" One dark mode
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'folke/tokyonight.nvim'
