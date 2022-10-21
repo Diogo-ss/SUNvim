@@ -15,7 +15,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} 				" Autocomplete
 Plug 'neovim/nvim-lspconfig' 									" LPS https://www.jakewiesler.com/blog/getting-started-with-vim
 Plug 'nvim-lua/plenary.nvim' 									" Dependênci do Telescope
 Plug 'nvim-telescope/telescope.nvim' 							" Localiza arquivos
-Plug 'navarasu/onedark.nvim' 									" One dark mode
 Plug 'kyazdani42/nvim-web-devicons' 							" Icones geral
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' } 				" Gerencidor de abas
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 	" TSInstall C (dependência do Telescope)
@@ -30,7 +29,14 @@ Plug 'dense-analysis/ale' 										" Icones do diagnostics
 " Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 
 " temas
+Plug 'navarasu/onedark.nvim' 									" One dark mode
 Plug 'tiagovla/tokyodark.nvim'
+Plug 'folke/tokyonight.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
+Plug 'luisiacc/gruvbox-baby'
+Plug 'rafamadriz/neon'
+Plug 'shaunsingh/nord.nvim'
+Plug 'rmehri01/onenord.nvim'
 
 call plug#end()
 ]])
