@@ -118,7 +118,7 @@ map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- 
 map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
 -- ranger
-map('n', '<leader>rr', '<CMD>TermExec size=10 direction=float cmd=ranger<CR>')										-- abre o Ranger no diretório atual
+map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")								-- abre o Ranger no diretório atual
 map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
 map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim update
 map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	-- SUNvim update
