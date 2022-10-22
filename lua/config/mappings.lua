@@ -65,6 +65,9 @@ vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
 vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>gt', builtin.git_status, {})
 
+-- lazygit
+map('n', '<leader>lg', "<CMD>TermExec size=10 direction=float cmd='lazygit && exit'<CR>")
+
 -- map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')	-- selecionar tudo no modo normal
 
 -- NvimTree
