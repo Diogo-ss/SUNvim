@@ -11,7 +11,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
 " Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lualine/lualine.nvim'
 " Plug 'terrortylor/nvim-comment'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 				" Autocomplete
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} 				" Autocomplete
 Plug 'neovim/nvim-lspconfig' 									" LPS https://www.jakewiesler.com/blog/getting-started-with-vim
 Plug 'nvim-lua/plenary.nvim' 									" Dependênci do Telescope
 Plug 'nvim-telescope/telescope.nvim' 							" Localiza arquivos
@@ -26,6 +26,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 					" Color for icons
 Plug 'sheerun/vim-polyglot' 									" Better sintax
 Plug 'folke/trouble.nvim' 										" lista os erros do código
 Plug 'dense-analysis/ale' 										" Icones do diagnostics
+Plug 'windwp/nvim-autopairs'
 " Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 
 " temas --
@@ -38,8 +39,21 @@ Plug 'rafamadriz/neon'
 Plug 'shaunsingh/nord.nvim'
 Plug 'rmehri01/onenord.nvim'
 
+" cmp
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 call plug#end()
 ]])
+
+-- lsp
+require ('lsp.cmp')
 
 require ('config.settings')
 require ('config.mappings')
@@ -57,7 +71,8 @@ require ('plugins.indent_blankline')
 require ('plugins.buffer')
 require ('plugins.alpha')
 require ('plugins.gitsigns')
-require ('plugins.coc_settings')
+require ('plugins.autopairs')
+-- require ('plugins.coc_settings')
 require ('plugins.vim_treesitter')
 require ('plugins.lsp_config')
 require ('plugins.colorizer')
