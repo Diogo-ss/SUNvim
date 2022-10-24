@@ -24,6 +24,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 					" Color for icons
 Plug 'sheerun/vim-polyglot' 									" Better sintax
 Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 " Plug 'voldikss/vim-floaterm' 									" Terminal fluent
+Plug 'shaunsingh/oxocarbon.nvim', { 'do': './install.sh' }
 
 call plug#end()
 ]])

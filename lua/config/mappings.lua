@@ -36,7 +36,7 @@ vc [[ nnoremap <silent> <C-A-j> :resize -3<CR> ]]			-- redimensiona o buffer hor
 vc [[ nnoremap <silent> <C-A-k> :resize +3<CR> ]]			-- redimensiona o buffer horizontal para cima
 
 -- navegação
-map('n', '<C-h>', '<C-w>h')									-- move o cursor para a direita
+map('n', '<C-g>', '<C-w>h')									-- move o cursor para a direita
 map('n', '<C-l>', '<C-w>l')									-- move o cursor para a esquerda
 map('n', '<C-k>', '<C-w>k')									-- move o cursor para baixo
 map('n', '<C-j>', '<C-w>j')									-- move o cursor para cima
@@ -118,8 +118,9 @@ map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- 
 map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
 -- ranger
-map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")								-- abre o Ranger no diretório atual
-map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
-map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim update
-map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	-- SUNvim update
+map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>") 		-- abre o Ranger no diretório atual
+map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SolarVim update
+map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SolarVim theme
+map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	-- Updates hisotry
+map('n', '<leader>ll', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/lline-theme/linetheme.sh'<CR>")
 

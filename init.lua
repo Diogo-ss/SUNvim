@@ -36,6 +36,7 @@ Plug 'ellisonleao/gruvbox.nvim'
 Plug 'luisiacc/gruvbox-baby'
 Plug 'rafamadriz/neon'
 Plug 'shaunsingh/nord.nvim'
+Plug 'shaunsingh/oxocarbon.nvim', { 'do': './install.sh' }
 Plug 'rmehri01/onenord.nvim'
 
 call plug#end()
