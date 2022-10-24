@@ -6,7 +6,7 @@ theme_num=0
 theme_h=0
 theme_v=0
 
-th_list=('onedark' 'tokyonight' 'tokyodark' 'gruvbox' 'gruvbox-baby' 'neon' 'nord' 'onenord', 'oxocarbon')
+th_list=('default' 'tokyonight' 'tokyodark' 'gruvbox' 'gruvbox-baby' 'neon' 'nord' 'onenord', 'oxocarbon')
 size=${#th_list[@]}
 
 declare -A st_list
