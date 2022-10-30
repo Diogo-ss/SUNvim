@@ -9,7 +9,7 @@ map('v', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode visual
 map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
 
 -- salvar alterações
-map('n', '<C-s>', '<CMD>w<CR>', {silent = true, noremap = true})								-- salva alerações no modo normal
+map('n', '<C-s>', '<CMD>w<CR>', {silent = true, noremap = true}) 	-- salva alerações no modo normal
 
 -- mover linhas
 map('n', '<A-j>', '<CMD>m .+1<CR>==')						-- move a linha atual para baixo no modo normal
@@ -68,7 +68,7 @@ vim.keymap.set('n', '<leader>gt', builtin.git_status, {})
 -- lazygit
 map('n', '<leader>lg', "<CMD>TermExec size=10 direction=float cmd='lazygit && exit'<CR>")
 
--- map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')	-- selecionar tudo no modo normal
+-- map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')-- selecionar tudo no modo normal
 
 -- NvimTree
 map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')			-- selecionar tudo no modo normal
@@ -81,10 +81,9 @@ map('v', '<S-TAB>', '<gv')									-- selecionar tudo no modo normal
 map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
 map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
 map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
-map('n', '<leader>p', '<CMD>BufferLineTogglePin<CR>')			-- fechar aba
+map('n', '<leader>p', '<CMD>BufferLineTogglePin<CR>')		-- fechar aba
 
 -- trouble
--- Lua
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}
 )
@@ -118,8 +117,10 @@ map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- 
 map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
 -- ranger
-map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")								-- abre o Ranger no diretório atual
+map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")								-- abre o Ranger
+
+-- SUNvim script
 map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
-map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim update
-map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	-- SUNvim update
+map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim theme
+map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	 		-- SUNvim fix_list
 

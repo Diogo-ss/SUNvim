@@ -41,6 +41,7 @@ Plug 'rmehri01/onenord.nvim'
 call plug#end()
 ]])
 
+-- config
 require ('config.settings')
 require ('config.mappings')
 require ('config.comment')
@@ -51,17 +52,20 @@ require ('plugins.nvim_tree')
 require ('plugins.telescope')
 require ('plugins.rainbow_parentheses')
 require ('plugins.lualine')
-require ('theme.theme')
 require ('plugins.icons_unicode')
 require ('plugins.indent_blankline')
 require ('plugins.buffer')
 require ('plugins.alpha')
 require ('plugins.gitsigns')
-require ('plugins.coc_settings')
-require ('plugins.vim_treesitter')
-require ('plugins.lsp_config')
 require ('plugins.colorizer')
 require ('plugins.toggleterm')
 require ('plugins.trouble')
+
+-- lsp
+require ('plugins.coc_settings')
+require ('plugins.vim_treesitter')
+require ('plugins.lsp_config')
 require ('plugins.ale_sign')
--- require ('plugins.lazy_lsp')
+
+-- temas
+require ('theme.theme')
