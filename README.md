@@ -1,3 +1,5 @@
+<a href="https://github.com/SolarVim/Solar" target="_blank"> SolarVim </a> - Migramos o SUNvim pra o SolarVim<p>
+
 # Simple Useful Nvim
 
 <img src="https://github.com/Diogo-ss/SUNvim/blob/main/screenshot/20220625_000531.png" min-width="200px" max-width="200px" width="300px" align="right" alt="Computador iuriCode">
